@@ -1,0 +1,25 @@
+{{#if addNewAnnouncement}}
+  <h1>New Announcement</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="owner">Title</label>
+        {{input value=title id="title"}}
+      </div>
+
+      <div class="form-group">
+        <label for="type">Body</label>
+        {{input value=body id="body"}}
+      </div>
+
+      <div class="form-group">
+        <label for="city">Date</label>
+        {{input type="date" value=date id="date"}}
+      </div>
+
+      <button {{action 'saveAnnouncement1'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'announcementFormShow'}}>New Announcement</button>
+{{/if}}
